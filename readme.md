@@ -41,7 +41,7 @@ SELECT
     e.title AS "职位",
     count(c.customer_id) AS "顾客总数"
 FROM employee e
-LEFT JOIN customer c ON e.employee_id = c.support_rep_id
+JOIN customer c ON e.employee_id = c.support_rep_id
 GROUP BY e.employee_id, e.first_name, e.last_name, e.title
 ORDER BY "顾客总数" ASC
 LIMIT 1;
