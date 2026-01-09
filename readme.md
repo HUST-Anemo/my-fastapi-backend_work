@@ -85,9 +85,9 @@ ORDER BY p.playlist_id ASC, "歌曲数量" DESC;
 
 ### 3. 网络编程异常
 
-• Timeout: ⽹络请求超时
-• Connection refuse : 此端⼝没有服务绑定(bind)
-• Connection reset : 连接被重置, ⽹络连接被 RST包重置(⾮正常关闭)
+- Timeout: ⽹络请求超时
+- Connection refuse : 此端⼝没有服务绑定(bind)
+- Connection reset : 连接被重置, ⽹络连接被 RST包重置(⾮正常关闭)
 
 ### 4. 服务报错 connection refuse
 
