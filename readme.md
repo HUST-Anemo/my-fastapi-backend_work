@@ -5,7 +5,7 @@
 **交互式测试**：[https://crud.sparxie.top/docs/](https://crud.sparxie.top/docs/)
 
 ## 后端作业二
-1. 查询不在美国境内的客户的姓名，客户id和国家。
+### 1. 查询不在美国境内的客户的姓名，客户id和国家。
 ```sql
 SELECT
 	customer.customer_id AS "客户ID",
@@ -14,7 +14,7 @@ SELECT
 FROM customer
 WHERE customer.country != 'USA'
 ```
-2. 统计不同的国家有多少个顾客。
+### 2. 统计不同的国家有多少个顾客。
 ```sql
 SELECT
 	customer.country AS "国家",
@@ -22,7 +22,7 @@ SELECT
  FROM customer
  GROUP BY customer.country;
 ```
-3. 2021年和2025年分别有多少张发票？这两年的发票额分别是多少？
+### 3. 2021年和2025年分别有多少张发票？这两年的发票额分别是多少？
 ```sql
 SELECT
 	EXTRACT(YEAR FROM invoice.invoice_date) AS "年份",
@@ -33,7 +33,7 @@ WHERE EXTRACT(YEAR FROM invoice.invoice_date) IN (2021, 2025)
 GROUP BY "年份"
 - 这个库里2010和2011没有数据
 ```
-4. 哪位员工的顾客总数最少。
+### 4. 哪位员工的顾客总数最少。
 ```sql
 SELECT 
     e.employee_id AS "员工编号",
@@ -46,7 +46,7 @@ GROUP BY e.employee_id, e.first_name, e.last_name, e.title
 ORDER BY "顾客总数" ASC
 LIMIT 1;
 ```
-5. 查询每个播放列表中曲目的总数。
+### 5. 查询每个播放列表中曲目的总数。
 ```sql
 SELECT 
     p.playlist_id AS "播放列表编号",
@@ -56,7 +56,7 @@ FROM playlist p
 JOIN playlist_track pt ON p.playlist_id = pt.playlist_id
 GROUP BY p.playlist_id, p.name
 ```
-6. 查询不同歌单中每种流派有多少歌曲.
+### 6. 查询不同歌单中每种流派有多少歌曲.
 ```sql
 SELECT 
     p.playlist_id AS "歌单编号",
